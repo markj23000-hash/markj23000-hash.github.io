@@ -5,61 +5,169 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mark Jones - Portfolio</title>
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
+            background-color: #f4f6f8;
+            color: #333;
             line-height: 1.6;
         }
-        h1 {
-            color: #333;
+
+        header {
+            background-color: #1a1a2e;
+            color: #fff;
+            text-align: center;
+            padding: 60px 20px;
         }
+
+        header h1 {
+            font-size: 2.4em;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            color: #aaa;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
         h2 {
-            color: #555;
-            margin-top: 30px;
-        }
-        .project {
+            font-size: 1.6em;
+            color: #1a1a2e;
             margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #0066cc;
+            display: inline-block;
         }
+
+        .project {
+            background: #fff;
+            border-radius: 8px;
+            padding: 24px 28px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+
         .project h3 {
-            margin-bottom: 5px;
+            font-size: 1.2em;
+            color: #1a1a2e;
+            margin-bottom: 8px;
         }
-        a {
+
+        .project p {
+            margin-bottom: 6px;
+            color: #555;
+        }
+
+        .tech {
+            font-size: 0.85em;
+            color: #888;
+            font-style: italic;
+        }
+
+        .project a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #fff;
+            background-color: #0066cc;
+            padding: 7px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: background-color 0.2s;
+        }
+
+        .project a:hover {
+            background-color: #0052a3;
+        }
+
+        .contact-section {
+            background: #fff;
+            border-radius: 8px;
+            padding: 24px 28px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-section p {
+            margin-bottom: 6px;
+            color: #555;
+        }
+
+        .contact-section a {
             color: #0066cc;
+            text-decoration: none;
+        }
+
+        .contact-section a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #999;
+            font-size: 0.85em;
         }
     </style>
 </head>
 <body>
-    <h1>Mark Jones</h1>
-    <p>Computer Science student at WGU specializing in AI and Machine Learning.</p>
 
-    <h2>Projects</h2>
+    <header>
+        <h1>Mark Jones</h1>
+        <p>Software Engineer | Machine Learning & AI | CS Graduate from Western Governors University</p>
+    </header>
 
-    <div class="project">
-        <h3>Telecom Churn Prediction Model</h3>
-        <p>Machine learning model using Random Forest and Gradient Boosting to predict customer churn with 76% recall on test set.</p>
-        <p class="tech">Technologies: Python, scikit-learn, pandas, matplotlib</p>
-        <p><a href="https://github.com/markj23000-hash/telecom-churn-prediction">View on GitHub</a></p>
+    <div class="container">
+
+        <h2>Projects</h2>
+
+        <div class="project">
+            <h3>Telecom Churn Prediction Model</h3>
+            <p>Binary classification model using Random Forest and Gradient Boosting to predict customer churn, optimized for recall and tuned with GridSearchCV. Achieved 76% recall on the test set.</p>
+            <p class="tech">Python, scikit-learn, pandas, matplotlib</p>
+            <a href="https://github.com/markj23000-hash/telecom-churn-prediction">View on GitHub</a>
+        </div>
+
+        <div class="project">
+            <h3>Health Risk Assessment Model</h3>
+            <p>Regression model predicting health risk scores from air quality and weather data using Gradient Boosting. Achieved R² of 0.973 and surfaced non-obvious findings about exposure patterns vs. pollution levels.</p>
+            <p class="tech">Python, scikit-learn, pandas, numpy, matplotlib</p>
+            <a href="https://github.com/markj23000-hash/health-risk-assessment">View on GitHub</a>
+        </div>
+
+        <div class="project">
+            <h3>Package Delivery Routing Program</h3>
+            <p>Optimized delivery routes for 40 packages across three trucks using a nearest neighbor algorithm and a custom hash table built from scratch. Includes full Big O analysis — O(n²) time, O(n) space.</p>
+            <p class="tech">Python, custom data structures, algorithm design</p>
+            <a href="https://github.com/markj23000-hash/package-delivery-routing">View on GitHub</a>
+        </div>
+
+        <h2>Contact</h2>
+
+        <div class="contact-section">
+            <p>Email: <a href="mailto:markj23000@gmail.com">markj23000@gmail.com</a></p>
+            <p>GitHub: <a href="https://github.com/markj23000-hash">github.com/markj23000-hash</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/mark-jones-b20a28287">linkedin.com/in/mark-jones-b20a28287</a></p>
+        </div>
+
     </div>
 
-   <div class="project">
-        <h3>Health Risk Assessment Model</h3>
-        <p>Predicted health risk scores from air quality and weather data using ensemble learning methods, achieving R² of 0.973.</p>
-        <p class="tech">Technologies: Python, Random Forest regression, data preprocessing</p>
-        <p><a href="https://github.com/markj23000-hash/health-risk-assessment">View on GitHub</a></p>
-    </div>
+    <footer>
+        <p>&copy; 2026 Mark Jones</p>
+    </footer>
 
-    <div class="project">
-        <h3>Package Delivery Routing Program</h3>
-        <p>Optimized delivery routes for 40 packages using nearest neighbor algorithm with custom hash table implementation for efficient package tracking.</p>
-        <p class="tech">Technologies: Python, algorithm optimization, data structures</p>
-        <p><a href="https://github.com/markj23000-hash/package-delivery-routing">View on GitHub</a></p>
-    </div>
-
-    <h2>Contact</h2>
-    <p>Email: markj23000@gmail.com</p>
-    <p>GitHub: <a href="https://github.com/markj23000-hash">github.com/markj23000-hash</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/mark-jones-b20a28287">linkedin.com/in/mark-jones-b20a28287</a></p>
 </body>
 </html>
